@@ -74,7 +74,7 @@ export const checkCorrectFix = () => async (req: Request<Record<string, unknown>
   if (fixData.fixes.length === 0) {
     res.status(404).json({
       error: 'No fixes found for the snippet!'
-    })
+const codingChallengeInfos = yaml.safeLoad(fs.readFileSync('./data/static/codefixes/' + key + '.info.yml', 'utf8'), { schema: yaml.CORE_SCHEMA })
   } else {
     let explanation
     if (fs.existsSync('./data/static/codefixes/' + key + '.info.yml')) {
